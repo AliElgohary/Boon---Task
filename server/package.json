@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist/index.js",
+    "predev": "npm run build",
+    "dev": "npx tsc -w & nodemon dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "mysql-migrations": "^1.0.7",
+    "mysql2": "^3.9.3",
+    "rimraf": "^5.0.5",
+    "sequelize": "^6.37.2",
+    "sequelize-cli": "^6.6.2",
+    "stripe": "^14.24.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^20.12.5",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.4"
+  }
+}
